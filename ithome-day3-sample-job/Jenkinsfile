@@ -6,6 +6,7 @@ pipeline {
             steps {
                 withCredentials([string(credentialsId: 'DB_ID', variable: 'DB_ID')]) {
                     echo "Hello Github ~ ${DB_ID}"
+                    echoSensitive("${DB_ID}")
                 }
             }
         }
