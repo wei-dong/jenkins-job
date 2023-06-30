@@ -5,7 +5,7 @@ pipeline {
             // 行為宣告
             steps {
                 withCredentials([string(credentialsId: 'DB_ID', variable: 'DB_ID')]) {
-                    echo 'Hello Github ~ ${DB_ID}'
+                    echo "Hello Github ~ ${DB_ID}"
                 }
             }
         }
