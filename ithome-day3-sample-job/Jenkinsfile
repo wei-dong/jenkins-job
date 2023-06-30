@@ -4,7 +4,9 @@ pipeline {
         stage('ithome 2022 pipeline') {
             // 行為宣告
             steps {
-                echo 'Hello Github ~'
+                withCredentials([string(credentialsId: 'DB_ID', variable: 'DB_ID')]) {
+                    echo 'Hello Github ~ ${DB_ID}'
+                }
             }
         }
     }
